@@ -1,5 +1,6 @@
 package com.thejavanerds.zhscraft.myGame;
 
+import com.thejavanerds.zhscraft.myGame.com.thejavanerds.zhscraft.world.World;
 import org.lwjgl.opengl.Display;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -13,6 +14,8 @@ public class Loader extends Screen {
 
     private GameLoop gameLoop;
 
+    public World world;
+
     public Loader() {
         gameLoop = new GameLoop();
         gameLoop.setScreen(this);
@@ -22,6 +25,8 @@ public class Loader extends Screen {
 
     @Override
     public void Init() {
+        initCamera();
+        world = new World();
 
     }
 
@@ -38,19 +43,27 @@ public class Loader extends Screen {
 
     @Override
     public void Update() {
-
+        world.Update();
     }
 
     @Override
     public void Render() {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glClearColor(0.2f, 0.2f, 0.85f, 0.2f);
+
+        world.Render();
     }
 
     @Override
     public void Dispose() {
+        world.Dispose();
+    }
+
+
+    private void initCamera() {
 
     }
+
 
     public static void main(String[] args) {
         Window.createWindow(WIDTH, HEIGHT, "MyGame", false, false);

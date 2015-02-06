@@ -8,4 +8,8 @@ public class BlockVoid extends Block {
     public BlockVoid() {
         super(0);
     }
+
+    public int getBlockID() {
+        return 0;
+    }
 }

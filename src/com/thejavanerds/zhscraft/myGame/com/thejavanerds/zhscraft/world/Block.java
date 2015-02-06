@@ -3,7 +3,7 @@ package com.thejavanerds.zhscraft.myGame.com.thejavanerds.zhscraft.world;
 /**
  * Created by ZhsCraft on 2/6/2015.
  */
-public class Block {
+public abstract class Block {
 
     public final static Block VOID = new BlockVoid();
 
@@ -16,13 +16,8 @@ public class Block {
 
 
 
-    public int getBlockID(){
-        return BlockID;
-    }
-    public void setBlockID(int id)
-    {
-        BlockID = id;
-    }
+    public abstract int getBlockID();
+
 
     public boolean isActive()
     {

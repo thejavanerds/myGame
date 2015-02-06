@@ -3,29 +3,18 @@ package com.thejavanerds.zhscraft.myGame;
 /**
  * Created by ZhsCraft on 2/6/2015.
  */
-public class Screen implements ScreenObject {
+public abstract class Screen implements ScreenObject {
     @Override
-    public void Init() {
-        
-    }
+    public abstract void Init();
 
     @Override
-    public void InitGL() {
-
-    }
+    public abstract void InitGL();
 
     @Override
-    public void Update() {
-
-    }
+    public abstract void Update();
 
     @Override
-    public void Render() {
-
-    }
-
+    public abstract void Render();
     @Override
-    public void Dispose() {
-
-    }
+    public abstract void Dispose();
 }

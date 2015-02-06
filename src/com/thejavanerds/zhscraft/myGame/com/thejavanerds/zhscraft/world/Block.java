@@ -5,6 +5,8 @@ package com.thejavanerds.zhscraft.myGame.com.thejavanerds.zhscraft.world;
  */
 public class Block {
 
+    public final static Block VOID = new BlockVoid();
+
     private int BlockID;
     private boolean isActive;
 

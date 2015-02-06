@@ -5,5 +5,29 @@ package com.thejavanerds.zhscraft.myGame.com.thejavanerds.zhscraft.world;
  */
 public class Block {
 
+    private int BlockID;
+    private boolean isActive;
 
+    public Block(int id){
+        this.BlockID = id;
+    }
+
+
+
+    public int getBlockID(){
+        return BlockID;
+    }
+    public void setBlockID(int id)
+    {
+        BlockID = id;
+    }
+
+    public boolean isActive()
+    {
+        return this.isActive;
+    }
+
+    public void setActive(boolean flag){
+        this.isActive = flag;
+    }
 }

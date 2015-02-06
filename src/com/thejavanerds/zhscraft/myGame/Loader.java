@@ -39,6 +39,7 @@ public class Loader extends Screen {
         gluPerspective(67.0f, WIDTH / HEIGHT, 0.001f, 1000f);
         glMatrixMode(GL_MODELVIEW);
 
+        glEnable(GL_DEPTH_TEST);
     }
 
     @Override

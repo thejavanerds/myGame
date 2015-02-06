@@ -1,6 +1,7 @@
 package com.thejavanerds.zhscraft.myGame;
 
 import org.lwjgl.BufferUtils;
+import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
 import javax.imageio.ImageIO;
@@ -15,8 +16,9 @@ import static org.lwjgl.opengl.GL11.*;
  * Created by ZhsCraft on 2/6/2015.
  */
 public class Texture {
-
-    public int id, width, height;
+    public int id;
+    public int width;
+    public int height;
 
     private Texture(int id, int width, int height) {
         this.id = id;
@@ -24,11 +26,11 @@ public class Texture {
         this.height = height;
     }
 
-    public static Texture LoadTexture(String location) {
+    public static Texture loadTexture(String name) {
         BufferedImage image = null;
+
         try {
-            //Texture.class.getClassLoader().getResourceAsStream(location));
-            image = ImageIO.read(new File("C:/darkz/textures/"));
+            image = ImageIO.read(new File("C:/darkz/textures/" + name));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,13 +72,11 @@ public class Texture {
 
     }
 
-    public void unbind()
-    {
+    public void unbind() {
         glBindTexture(GL_TEXTURE_2D, 0);
     }
 
-    public void delete()
-    {
+    public void delete() {
         glDeleteTextures(id);
     }
 }

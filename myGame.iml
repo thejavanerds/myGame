@@ -39,10 +39,10 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/GLUtils.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/GLUtils(1).jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

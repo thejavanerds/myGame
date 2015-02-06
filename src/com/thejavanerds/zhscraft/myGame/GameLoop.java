@@ -2,6 +2,7 @@ package com.thejavanerds.zhscraft.myGame;
 
 
 import com.nishu.utils.Time;
+import org.lwjgl.opengl.Display;
 
 /**
  * Created by ZhsCraft on 2/6/2015.
@@ -88,6 +89,7 @@ public class GameLoop {
 
 
     private void update() {
+        Display.update();
         currentScreen.Update();
     }
 
